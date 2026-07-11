@@ -1,0 +1,1335 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>花漾西欧 法意瑞德4国12天 | 高端旅行单页</title>
+  <style>
+    :root {
+      --ink: #121212;
+      --muted: #5f6469;
+      --paper: #f7f3eb;
+      --soft: #fffaf2;
+      --white: #ffffff;
+      --gold: #b08a4a;
+      --gold-2: #d3b16b;
+      --green: #214f44;
+      --blue: #315f7c;
+      --wine: #7b2f3e;
+      --line: rgba(18, 18, 18, .13);
+      --shadow: 0 24px 60px rgba(26, 22, 17, .18);
+      --radius: 8px;
+      --img-paris: url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2400&q=88");
+      --img-louvre: url("https://images.unsplash.com/photo-1549144511-f099e773c147?auto=format&fit=crop&w=1800&q=86");
+      --img-colmar: url("https://images.unsplash.com/photo-1526816229784-65d5d54ac8bc?auto=format&fit=crop&w=1800&q=86");
+      --img-alps: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1800&q=86");
+      --img-venice: url("https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1800&q=86");
+      --img-rome: url("https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1800&q=86");
+      --img-florence: url("https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?auto=format&fit=crop&w=1800&q=86");
+      --img-milan: url("https://images.unsplash.com/photo-1513581166391-887a96ddeafd?auto=format&fit=crop&w=1800&q=86");
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(176, 138, 74, .12), transparent 30%),
+        linear-gradient(180deg, #fbf8f2 0%, #f4efe5 42%, #ffffff 100%);
+      font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px clamp(20px, 5vw, 72px);
+      color: #fff;
+      background: linear-gradient(180deg, rgba(0, 0, 0, .42), rgba(0, 0, 0, 0));
+      transition: background .3s ease, color .3s ease, box-shadow .3s ease;
+    }
+
+    .site-header.is-solid {
+      color: var(--ink);
+      background: rgba(255, 250, 242, .92);
+      box-shadow: 0 14px 34px rgba(20, 18, 15, .1);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 180px;
+      font-weight: 700;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      font-family: Georgia, serif;
+      font-size: 18px;
+    }
+
+    .brand small {
+      display: block;
+      color: currentColor;
+      font-size: 11px;
+      font-weight: 500;
+      opacity: .72;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(14px, 2vw, 28px);
+      font-size: 14px;
+    }
+
+    .nav a {
+      opacity: .88;
+    }
+
+    .nav a:hover {
+      opacity: 1;
+    }
+
+    .nav-cta {
+      padding: 10px 16px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      color: #fff;
+      isolation: isolate;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      background-image:
+        linear-gradient(90deg, rgba(0, 0, 0, .72), rgba(0, 0, 0, .22) 48%, rgba(0, 0, 0, .08)),
+        linear-gradient(0deg, rgba(0, 0, 0, .72), transparent 44%),
+        var(--img-paris);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 160px;
+      background: linear-gradient(180deg, transparent, var(--paper));
+      z-index: -1;
+    }
+
+    .hero-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 132px 0 82px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-2);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 18px 0 22px;
+      font-family: Georgia, "Times New Roman", "Songti SC", serif;
+      font-size: clamp(46px, 8vw, 108px);
+      line-height: .96;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .hero-lead {
+      max-width: 690px;
+      margin: 0 0 36px;
+      color: rgba(255, 255, 255, .88);
+      font-size: clamp(17px, 2.2vw, 24px);
+      line-height: 1.55;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 13px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .6);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, .1);
+      backdrop-filter: blur(12px);
+    }
+
+    .button.primary {
+      color: #17130c;
+      border-color: transparent;
+      background: linear-gradient(135deg, #f7df9e, #b08a4a);
+      box-shadow: 0 16px 44px rgba(176, 138, 74, .26);
+    }
+
+    .button svg {
+      flex: 0 0 auto;
+      width: 18px;
+      height: 18px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      width: min(1020px, calc(100% - 40px));
+      margin: -46px auto 0;
+      position: relative;
+      z-index: 3;
+      background: rgba(255, 255, 255, .2);
+      box-shadow: var(--shadow);
+    }
+
+    .stat {
+      min-height: 118px;
+      padding: 24px;
+      background: rgba(255, 250, 242, .94);
+      backdrop-filter: blur(16px);
+    }
+
+    .stat b {
+      display: block;
+      color: var(--ink);
+      font-family: Georgia, serif;
+      font-size: clamp(26px, 4vw, 42px);
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    section {
+      padding: clamp(76px, 10vw, 132px) 0;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+      gap: 36px;
+      align-items: end;
+      margin-bottom: 38px;
+    }
+
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "Songti SC", serif;
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 1.05;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.1fr .85fr .85fr;
+      grid-auto-rows: minmax(230px, 29vw);
+      gap: 14px;
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: #ddd;
+      box-shadow: 0 18px 40px rgba(24, 18, 12, .14);
+    }
+
+    .photo.large {
+      grid-row: span 2;
+    }
+
+    .photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 42%, rgba(0, 0, 0, .62));
+    }
+
+    .photo.one { background-image: var(--img-louvre); background-size: cover; background-position: center; }
+    .photo.two { background-image: var(--img-colmar); background-size: cover; background-position: center; }
+    .photo.three { background-image: var(--img-alps); background-size: cover; background-position: center; }
+    .photo.four { background-image: var(--img-venice); background-size: cover; background-position: center; }
+    .photo.five { background-image: var(--img-rome); background-size: cover; background-position: center; }
+
+    .photo-label {
+      position: absolute;
+      z-index: 2;
+      left: 18px;
+      right: 18px;
+      bottom: 16px;
+      color: #fff;
+    }
+
+    .photo-label strong {
+      display: block;
+      font-size: 19px;
+      line-height: 1.2;
+    }
+
+    .photo-label span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255, 255, 255, .78);
+      font-size: 13px;
+    }
+
+    .route-section {
+      background:
+        linear-gradient(180deg, rgba(33, 79, 68, .08), rgba(255, 255, 255, .68)),
+        var(--paper);
+    }
+
+    .route-board {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .map-panel,
+    .route-notes,
+    .highlight-card,
+    .day-card,
+    .include-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .72);
+      box-shadow: 0 18px 44px rgba(33, 28, 20, .08);
+    }
+
+    .map-panel {
+      min-height: 520px;
+      padding: clamp(18px, 3vw, 34px);
+      overflow: hidden;
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 100%;
+      min-height: 460px;
+    }
+
+    .route-svg {
+      width: 100%;
+      height: 100%;
+      min-height: 460px;
+    }
+
+    .route-path {
+      fill: none;
+      stroke: url(#routeGold);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 11 10;
+      animation: routeMove 16s linear infinite;
+    }
+
+    @keyframes routeMove {
+      to { stroke-dashoffset: -260; }
+    }
+
+    .city-dot {
+      fill: var(--white);
+      stroke: var(--gold);
+      stroke-width: 3;
+      filter: drop-shadow(0 7px 10px rgba(0, 0, 0, .18));
+    }
+
+    .city-main {
+      fill: var(--green);
+      stroke: var(--gold-2);
+      stroke-width: 4;
+    }
+
+    .city-label {
+      fill: var(--ink);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .country-label {
+      fill: rgba(18, 18, 18, .34);
+      font-family: Georgia, serif;
+      font-size: 54px;
+      font-weight: 500;
+    }
+
+    .route-notes {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .route-notes h3,
+    .highlight-card h3,
+    .include-card h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .route-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .route-list li {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      gap: 12px;
+      align-items: start;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .route-list b {
+      color: var(--ink);
+    }
+
+    .badge {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .flight-card {
+      display: grid;
+      gap: 12px;
+      padding: 18px;
+      color: #fff;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(18, 18, 18, .78), rgba(33, 79, 68, .86)),
+        var(--img-milan);
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 18px 36px rgba(33, 79, 68, .22);
+    }
+
+    .flight-card span {
+      color: rgba(255, 255, 255, .72);
+      font-size: 12px;
+    }
+
+    .flight-card strong {
+      font-size: 18px;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .highlight-card {
+      min-height: 270px;
+      overflow: hidden;
+    }
+
+    .highlight-image {
+      height: 154px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .highlight-card:nth-child(1) .highlight-image { background-image: var(--img-louvre); }
+    .highlight-card:nth-child(2) .highlight-image { background-image: var(--img-alps); }
+    .highlight-card:nth-child(3) .highlight-image { background-image: var(--img-venice); }
+    .highlight-card:nth-child(4) .highlight-image { background-image: var(--img-rome); }
+    .highlight-card:nth-child(5) .highlight-image { background-image: var(--img-florence); }
+    .highlight-card:nth-child(6) .highlight-image { background-image: var(--img-milan); }
+
+    .highlight-body {
+      padding: 20px;
+    }
+
+    .highlight-body p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .split-band {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(18, 18, 18, .82), rgba(18, 18, 18, .36)),
+        var(--img-venice);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .split-band .wrap {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(300px, .7fr);
+      gap: 56px;
+      align-items: center;
+      min-height: 520px;
+    }
+
+    .split-band h2 {
+      color: #fff;
+    }
+
+    .split-band p {
+      color: rgba(255, 255, 255, .82);
+      font-size: 18px;
+    }
+
+    .signature-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .signature-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .22);
+      font-size: 15px;
+    }
+
+    .signature-list b {
+      color: #f8d98f;
+    }
+
+    .itinerary {
+      background: #fff;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 14px;
+    }
+
+    .day-card {
+      display: grid;
+      grid-template-columns: 136px 1fr;
+      overflow: hidden;
+    }
+
+    .day-index {
+      padding: 22px 18px;
+      color: #fff;
+      background: linear-gradient(160deg, var(--green), var(--blue));
+    }
+
+    .day-index b {
+      display: block;
+      font-family: Georgia, serif;
+      font-size: 36px;
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .day-index span {
+      display: block;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, .76);
+      font-size: 12px;
+    }
+
+    .day-content {
+      padding: 22px 24px 24px;
+    }
+
+    .day-title {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .day-title h3 {
+      margin: 0;
+      font-size: 23px;
+      line-height: 1.25;
+    }
+
+    .distance {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .day-content p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 5px 10px;
+      border: 1px solid rgba(176, 138, 74, .28);
+      border-radius: 999px;
+      color: #55442b;
+      background: rgba(247, 223, 158, .18);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .includes {
+      background:
+        linear-gradient(180deg, #fff, #f7f3eb);
+    }
+
+    .include-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .include-card {
+      padding: 22px;
+      min-height: 190px;
+    }
+
+    .include-icon {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 18px;
+      color: #fff;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--wine), var(--gold));
+    }
+
+    .include-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .include-card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta {
+      padding: 0;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(18, 18, 18, .82), rgba(18, 18, 18, .32)),
+        var(--img-florence);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .cta .wrap {
+      min-height: 420px;
+      display: grid;
+      align-items: center;
+      padding: 84px 0;
+    }
+
+    .cta h2 {
+      max-width: 760px;
+      color: #fff;
+    }
+
+    .cta p {
+      max-width: 660px;
+      margin: 20px 0 0;
+      color: rgba(255, 255, 255, .82);
+      font-size: 18px;
+    }
+
+    .footer {
+      padding: 30px 0;
+      color: rgba(255, 255, 255, .72);
+      background: #121212;
+      font-size: 13px;
+    }
+
+    .footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: 88vh;
+      }
+
+      .hero-stats,
+      .section-head,
+      .route-board,
+      .split-band .wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery,
+      .highlights,
+      .include-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .photo.large {
+        grid-row: span 1;
+        grid-column: span 2;
+      }
+
+      .split-band {
+        background-attachment: scroll;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .site-header {
+        padding: 14px 18px;
+      }
+
+      .brand {
+        min-width: 0;
+      }
+
+      .brand small {
+        display: none;
+      }
+
+      .hero-inner {
+        width: min(100% - 32px, 1180px);
+        padding-bottom: 64px;
+      }
+
+      h1 {
+        font-size: clamp(42px, 14vw, 66px);
+      }
+
+      .hero-actions {
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-stats,
+      .gallery,
+      .highlights,
+      .include-grid {
+        grid-template-columns: 1fr;
+        width: min(100% - 32px, 1180px);
+      }
+
+      .stat {
+        min-height: auto;
+      }
+
+      .photo.large {
+        grid-column: auto;
+      }
+
+      .map-panel {
+        min-height: 420px;
+        padding: 8px;
+      }
+
+      .route-svg,
+      .map-frame {
+        min-height: 420px;
+      }
+
+      .day-card {
+        grid-template-columns: 1fr;
+      }
+
+      .day-index {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+      }
+
+      .footer .wrap {
+        display: grid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="topbar">
+    <a class="brand" href="#top" aria-label="返回顶部">
+      <span class="brand-mark">E</span>
+      <span>花漾西欧<small>France · Switzerland · Germany · Italy</small></span>
+    </a>
+    <nav class="nav" aria-label="页面导航">
+      <a href="#story">视觉概览</a>
+      <a href="#route">线路图</a>
+      <a href="#highlights">产品卖点</a>
+      <a href="#itinerary">完整行程</a>
+      <a class="nav-cta" href="#included">服务包含</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="花漾西欧法意瑞德4国12天">
+      <div class="hero-inner">
+        <span class="eyebrow">CA0927 · 巴黎进 · 米兰出</span>
+        <h1>花漾西欧 法意瑞德4国12天</h1>
+        <p class="hero-lead">从成都天府启程，以巴黎的艺术金光开场，穿越阿尔萨斯童话小镇、黑森林湖泊与瑞士雪峰，最终抵达威尼斯水巷、罗马遗迹、佛罗伦萨与米兰的时尚心脏。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#itinerary">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            查看12天行程
+          </a>
+          <a class="button" href="#route">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3zM9 3v15M15 6v15" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            打开线路图
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="hero-stats reveal" aria-label="线路核心数字">
+      <div class="stat"><b>12</b><span>天沉浸式欧洲连线</span></div>
+      <div class="stat"><b>4</b><span>法国 · 德国 · 瑞士 · 意大利</span></div>
+      <div class="stat"><b>9</b><span>晚欧洲甄选酒店</span></div>
+      <div class="stat"><b>18</b><span>顿团队正餐与特色餐</span></div>
+    </div>
+
+    <section id="story">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="kicker">IMMERSIVE EUROPE</p>
+            <h2>一条把艺术、雪山、湖泊与古城串联起来的西欧美学长廊</h2>
+          </div>
+          <p>页面视觉以“宫廷金、雪峰白、湖水绿、葡萄酒红”为主线，呈现轻奢但不压迫的旅行质感。首屏建立向往，线路图建立信任，行程时间轴帮助用户快速判断节奏。</p>
+        </div>
+
+        <div class="gallery reveal" aria-label="目的地实景图集">
+          <article class="photo large one">
+            <div class="photo-label"><strong>巴黎艺术开场</strong><span>卢浮宫、凡尔赛宫、塞纳河游船</span></div>
+          </article>
+          <article class="photo two">
+            <div class="photo-label"><strong>阿尔萨斯童话色彩</strong><span>科尔马老城与法德边境风情</span></div>
+          </article>
+          <article class="photo three">
+            <div class="photo-label"><strong>瑞士山湖光影</strong><span>琉森湖、因特拉肯、菲斯特悬崖步道</span></div>
+          </article>
+          <article class="photo four">
+            <div class="photo-label"><strong>威尼斯黄金水道</strong><span>圣马可广场与黄金大运河</span></div>
+          </article>
+          <article class="photo five">
+            <div class="photo-label"><strong>永恒之城罗马</strong><span>斗兽场、许愿池、万神殿</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="route-section" id="route">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="kicker">VISUAL ROUTE</p>
+            <h2>从巴黎到米兰的西欧弧线，一路由北向南收束</h2>
+          </div>
+          <p>视觉线路图突出“巴黎进、米兰出”的动线效率：法国深度开场，经德国黑森林与瑞士阿尔卑斯过渡，进入意大利水城、古城、文艺复兴与时尚之都。</p>
+        </div>
+
+        <div class="route-board reveal">
+          <div class="map-panel">
+            <div class="map-frame" role="img" aria-label="成都至巴黎，途经科尔马、滴滴湖、琉森、因特拉肯、威尼斯、罗马、佛罗伦萨、比萨、米兰，返回成都的线路图">
+              <svg class="route-svg" viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="routeGold" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#b08a4a"/>
+                    <stop offset="50%" stop-color="#315f7c"/>
+                    <stop offset="100%" stop-color="#7b2f3e"/>
+                  </linearGradient>
+                  <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#000" flood-opacity=".16"/>
+                  </filter>
+                </defs>
+                <rect x="0" y="0" width="900" height="560" rx="8" fill="#fffaf2"/>
+                <path d="M50 370 C190 235 265 190 355 182 C445 176 480 235 525 255 C595 286 640 254 690 292 C752 340 708 405 650 428 C582 455 530 444 486 482 C448 514 535 535 700 504" fill="none" stroke="rgba(33,79,68,.08)" stroke-width="76" stroke-linecap="round"/>
+                <text class="country-label" x="115" y="160">FRANCE</text>
+                <text class="country-label" x="502" y="190">SWISS</text>
+                <text class="country-label" x="524" y="395">ITALY</text>
+                <text class="country-label" x="328" y="280">GERMANY</text>
+                <path class="route-path" d="M92 286 C186 190 287 168 365 202 C435 233 440 284 509 299 C572 313 622 292 680 328 C746 369 744 439 668 460 C596 480 520 452 482 492 C455 520 556 524 760 492"/>
+
+                <g filter="url(#softShadow)">
+                  <circle class="city-main" cx="92" cy="286" r="13"/><text class="city-label" x="112" y="291">巴黎</text>
+                  <circle class="city-dot" cx="260" cy="190" r="10"/><text class="city-label" x="278" y="195">科尔马</text>
+                  <circle class="city-dot" cx="365" cy="202" r="10"/><text class="city-label" x="383" y="207">滴滴湖</text>
+                  <circle class="city-dot" cx="509" cy="299" r="10"/><text class="city-label" x="526" y="304">琉森</text>
+                  <circle class="city-dot" cx="602" cy="304" r="10"/><text class="city-label" x="620" y="309">因特拉肯</text>
+                  <circle class="city-dot" cx="680" cy="328" r="10"/><text class="city-label" x="698" y="333">威尼斯</text>
+                  <circle class="city-dot" cx="668" cy="460" r="10"/><text class="city-label" x="686" y="465">罗马</text>
+                  <circle class="city-dot" cx="560" cy="454" r="10"/><text class="city-label" x="578" y="459">佛罗伦萨</text>
+                  <circle class="city-dot" cx="482" cy="492" r="10"/><text class="city-label" x="405" y="498">比萨</text>
+                  <circle class="city-main" cx="760" cy="492" r="13"/><text class="city-label" x="780" y="497">米兰</text>
+                </g>
+
+                <g fill="none" stroke="#b08a4a" stroke-width="1.5" opacity=".7">
+                  <path d="M43 96h180M43 96c24 18 24 44 0 62h180"/>
+                  <path d="M676 88h140M676 88c20 16 20 38 0 54h140"/>
+                </g>
+                <text x="46" y="82" fill="#214f44" font-size="14" font-weight="800">成都天府 TIANFU</text>
+                <text x="676" y="76" fill="#214f44" font-size="14" font-weight="800">巴黎进 · 米兰出</text>
+                <text x="46" y="185" fill="#5f6469" font-size="13">CA445 01:40-06:50</text>
+                <text x="676" y="168" fill="#5f6469" font-size="13">CA446 13:00-05:40+1</text>
+              </svg>
+            </div>
+          </div>
+
+          <aside class="route-notes">
+            <div>
+              <h3>线路节奏</h3>
+              <ul class="route-list">
+                <li><span class="badge">1</span><span><b>艺术宫殿段</b>：巴黎、卢浮宫、凡尔赛宫、塞纳河。</span></li>
+                <li><span class="badge">2</span><span><b>童话山湖段</b>：科尔马、滴滴湖、琉森、因特拉肯。</span></li>
+                <li><span class="badge">3</span><span><b>意大利文明段</b>：威尼斯、罗马、佛罗伦萨、比萨、米兰。</span></li>
+              </ul>
+            </div>
+            <div class="flight-card">
+              <span>参考国际航班</span>
+              <strong>成都天府 - 巴黎 CA445</strong>
+              <strong>米兰 - 成都天府 CA446</strong>
+              <span>航班号及时间以最终出团通知为准</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlights">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="kicker">PRODUCT HIGHLIGHTS</p>
+            <h2>不只打卡，重点体验都已放进价格价值里</h2>
+          </div>
+          <p>将文档中标注“特别安排”的内容前置为卖点，强化首道门票、耳机讲解、游船、特色餐、阿尔卑斯索道与罗马深度游的感知价值。</p>
+        </div>
+
+        <div class="highlights reveal">
+          <article class="highlight-card">
+            <div class="highlight-image"></div>
+            <div class="highlight-body">
+              <h3>巴黎双宫殿艺术</h3>
+              <p>卢浮宫含首道门票与耳机讲解，凡尔赛宫含首道门票与耳机讲解，用足时间进入欧洲艺术现场。</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="highlight-image"></div>
+            <div class="highlight-body">
+              <h3>阿尔卑斯高光体验</h3>
+              <p>格林德瓦-菲斯特含索道与悬崖步道，远观少女峰、僧侣峰、艾格峰，山谷视野更完整。</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="highlight-image"></div>
+            <div class="highlight-body">
+              <h3>双水上体验</h3>
+              <p>塞纳河游船叠加威尼斯黄金大运河，分别呈现巴黎岸线与水城共和国的华丽建筑群。</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="highlight-image"></div>
+            <div class="highlight-body">
+              <h3>罗马深度动线</h3>
+              <p>斗兽场、君士坦丁凯旋门、古罗马废墟外观后，深入许愿池与万神殿区域。</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="highlight-image"></div>
+            <div class="highlight-body">
+              <h3>文艺复兴核心</h3>
+              <p>佛罗伦萨串联圣母百花大教堂、市政厅广场、大卫像、海神喷泉与圣十字广场。</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="highlight-image"></div>
+            <div class="highlight-body">
+              <h3>特色餐食升级</h3>
+              <p>巴黎 Kebab 烤肉快餐与威尼斯墨鱼面纳入行程，形成当地风味记忆点。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="split-band">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="kicker">SIGNATURE MOMENTS</p>
+          <h2>把“必看”做成“记得住”的旅行瞬间</h2>
+          <p>这套页面不把行程堆成清单，而是用画面、地图、亮点和时间轴逐层讲述：用户先被目的地吸引，再理解线路合理性，最后看清每天怎么玩。</p>
+        </div>
+        <ul class="signature-list reveal">
+          <li><span>卢浮宫入内</span><b>不少于2小时</b></li>
+          <li><span>凡尔赛宫入内</span><b>不少于2小时</b></li>
+          <li><span>滴滴湖游船</span><b>不少于30分钟</b></li>
+          <li><span>菲斯特索道+悬崖步道</span><b>约2小时</b></li>
+          <li><span>黄金大运河</span><b>不少于25分钟</b></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="itinerary" id="itinerary">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="kicker">DAY BY DAY</p>
+            <h2>完整12天行程安排</h2>
+          </div>
+          <p>根据文档提取每日城市、交通、餐食、住宿与核心游览内容，保留必要时间说明，同时控制页面阅读密度。</p>
+        </div>
+
+        <div class="timeline reveal">
+          <article class="day-card">
+            <div class="day-index"><b>D1</b><span>成都集合</span></div>
+            <div class="day-content">
+              <div class="day-title"><h3>成都天府机场集合</h3><span class="distance">行：无</span></div>
+              <p>晚间于成都天府机场国际厅集合，由领队协助办理登机手续，搭乘中国国际航空航班飞往巴黎，开启环欧洲之旅。</p>
+              <div class="tags"><span class="tag">餐：无</span><span class="tag">住：飞机上</span></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-index"><b>D2</b><span>成都 - 巴黎</span></div>
+            <div class="day-content">
+              <div class="day-title"><h3>抵达花都巴黎，艺术与时尚初见</h3><span class="distance">CA445 01:40-06:50</span></div>
+              <p>抵达后游览巴黎：卢浮宫入内含首道门票与耳机讲解、卢浮宫金字塔外观、协和广场、花宫娜香水博物馆、奥斯曼大道、巴黎圣母院入内或外观、老佛爷百货。特别安排巴黎 Kebab 烤肉快餐。</p>
+              <div class="tags"><span class="tag">餐：中/晚</span><span class="tag">住：当地酒店双标</span><span class="tag">行：汽车/飞机</span></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-index"><b>D3</b><span>巴黎</span></div>
+            <div class="day-content">
+              <div class="day-title"><h3>凡尔赛宫与塞纳河游船</h3><span class="distance">巴黎深度</span></div>
+              <p>早餐后开启浪漫巴黎之旅：凡尔赛宫入内含首道门票与耳机讲解，外观埃菲尔铁塔与凯旋门，乘坐塞纳河游船欣赏沿岸城市风景。</p>
+              <div class="tags"><span class="tag">餐：早/中/晚</span><span class="tag">住：当地酒店双标</span><span class="tag">行：汽车</span></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-index"><b>D4</b><span>巴黎 - 科尔马</span></div>
+            <div class="day-content">
+              <div class="day-title"><h3>驶向阿尔萨斯童话小镇</h3><span class="distance">约490KM</span></div>
+              <p>乘车前往科尔马，感受兼具法德风情的老城。游览普菲斯特楼、圣马丁教堂等小镇核心地标，欣赏保存完好的历史街区。</p>
+              <div class="tags"><span class="tag">餐：早/中/晚</span><span class="tag">住：当地酒店双标</span><span class="tag">行：汽车</span></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-index"><b>D5</b><span>法小镇 - 滴滴湖 - 琉森</span></div>
+            <div class="day-content">
+              <div class="day-title"><h3>黑森林明珠与瑞士湖城</h3><span class="distance">约90KM + 130KM</span></div>
+              <p>游览德国黑森林地区的滴滴湖，特别安排游船体验。随后前往琉森，游览卡贝尔廊桥、狮子纪念碑、卡佩尔广场与琉森湖畔。</p>
+              <div class="tags"><span class="tag">餐：早/中/晚</span><span class="tag">住：当地酒店双标</span><span class="tag">行：汽车</span></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-index"><b>D6</b><span>琉森 - 因特拉肯 - 意小镇</span></div>
+            <div class="day-content">
+              <div class="day-title"><h3>少女峰脚下与菲斯特悬崖步道</h3><span class="distance">阿尔卑斯高光</span></div>
+              <p>前往因特拉肯，游览何维克街与荷黑马特大草坪，远观少女峰、僧侣峰、艾格峰。特别安排格林德瓦-菲斯特索道及悬崖步道，饱览阿尔卑斯全景。</p>
+              <div class="tags"><span class="tag">餐：早/中/晚</span><span class="tag">住：当地酒店双标</span><span class="tag">行：汽车</span></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-index"><b>D7</b><span>意小镇 - 威尼斯 - 意小镇</span></div>
+            <div class="day-content">
+              <div class="day-title"><h3>水城威尼斯与黄金大运河</h3><span class="distance">水上名城</span></div>
+              <p>游览圣马可广场、总督宫外观、钟楼外观、圣马可大教堂外观、叹息桥远观。特别安排黄金大运河体验，乘快艇穿越贵族豪宅与里亚托桥水域，并享用威尼斯墨鱼面。</p>
+              <div class="tags"><span class="tag">餐：早/中/晚</span><span class="tag">住：当地酒店双标</span><span class="tag">行：汽车</span></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-index"><b>D8</b><span>意小镇 - 罗马 - 意小镇</span></div>
+            <div class="day-content">
+              <div class="day-title"><h3>永恒之城罗马深度游览</h3><span class="distance">古罗马文明</span></div>
+              <p>前往罗马，外观斗兽场、君士坦丁凯旋门与古罗马废墟。特别安排罗马深度：特来维喷泉与少女许愿池、万神殿等经典区域。</p>
+              <div class="tags"><span class="tag">餐：早/中/晚</span><span class="tag">住：当地酒店双标</span><span class="tag">行：汽车</span></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-index"><b>D9</b><span>意小镇 - 佛罗伦萨 - 比萨</span></div>
+            <div class="day-content">
+              <div class="day-title"><h3>翡冷翠文艺复兴巡礼</h3><span class="distance">艺术城市</span></div>
+              <p>游览佛罗伦萨：圣母百花大教堂外观、乔托钟楼、圣约翰洗礼堂、市政厅广场、大卫像、海神喷泉、科西莫一世骑马像、佣兵凉廊、圣十字广场与圣十字教堂外观。</p>
+              <div class="tags"><span class="tag">餐：早/中/晚</span><span class="tag">住：当地酒店双标</span><span class="tag">行：汽车</span></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-index"><b>D10</b><span>比萨 - 米兰</span></div>
+            <div class="day-content">
+              <div class="day-title"><h3>比萨奇迹广场与米兰时尚收束</h3><span class="distance">意大利经典</span></div>
+              <p>游览比萨斜塔外观，随后前往米兰，游览米兰大教堂外观、杜莫广场与斯卡拉剧院外观，感受意大利时尚与歌剧之都的城市气质。</p>
+              <div class="tags"><span class="tag">餐：早/中/晚</span><span class="tag">住：当地酒店双标</span><span class="tag">行：汽车</span></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-index"><b>D11</b><span>米兰 - 成都天府</span></div>
+            <div class="day-content">
+              <div class="day-title"><h3>搭乘国际航班返程</h3><span class="distance">CA446 13:00-05:40+1</span></div>
+              <p>早餐后前往机场，搭乘国际航班返回成都天府，结束欧洲段行程。</p>
+              <div class="tags"><span class="tag">餐：早/飞机餐</span><span class="tag">住：飞机上</span><span class="tag">行：汽车/飞机</span></div>
+            </div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-index"><b>D12</b><span>成都</span></div>
+            <div class="day-content">
+              <div class="day-title"><h3>抵达成都，旅程圆满结束</h3><span class="distance">回到温暖的家</span></div>
+              <p>抵达成都后结束愉快的欧洲之旅。根据团队签证要求，请将护照及往返登机牌交由导游送回使馆销签。</p>
+              <div class="tags"><span class="tag">餐：无</span><span class="tag">住：无</span><span class="tag">行：飞机</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="includes" id="included">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <p class="kicker">SERVICE VALUE</p>
+            <h2>服务包含与交付感知</h2>
+          </div>
+          <p>将传统报价信息转化为用户能快速理解的价值模块，适合旅行社落地页、产品专题页或私域成交页直接使用。</p>
+        </div>
+
+        <div class="include-grid reveal">
+          <article class="include-card">
+            <div class="include-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 16l20-9-7 13-4-6-6 4-3-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>国际交通</h3>
+            <p>包含国内起止往返国际经济舱机票及燃油附加费，成都天府出发，巴黎进米兰出。</p>
+          </article>
+          <article class="include-card">
+            <div class="include-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13M9 21v-8h6v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>甄选住宿</h3>
+            <p>全程欧洲甄选9晚3-4星级酒店，意大利段四星，含酒店内欧陆式团队早餐。</p>
+          </article>
+          <article class="include-card">
+            <div class="include-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 3v18M8 3v18M4 8h4M14 3v8a4 4 0 0 0 4 4h2v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>18顿正餐</h3>
+            <p>16顿中式团队餐，升级威尼斯墨鱼面与巴黎 Kebab 烤肉餐，兼顾舒适与地方记忆点。</p>
+          </article>
+          <article class="include-card">
+            <div class="include-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-4.5 7-11V5l-7-3-7 3v5c0 6.5 7 11 7 11z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>保险与保障</h3>
+            <p>含境外意外保险与境外紧急救援险，专业中文优秀领队兼导游服务，豪华游览大巴及专业司机。</p>
+          </article>
+          <article class="include-card">
+            <div class="include-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h18M6 7v12h12V7M9 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>门票项目</h3>
+            <p>卢浮宫、凡尔赛宫、塞纳河游船、黄金大运河、罗马深度、巴黎圣母院、菲斯特雪山等已纳入。</p>
+          </article>
+          <article class="include-card">
+            <div class="include-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 12a6 6 0 0 1 12 0M9 12a3 3 0 0 1 6 0M12 16h.01M4 9a10 10 0 0 1 16 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>随行便利</h3>
+            <p>每人配转换插头与机上三宝，团队安排 WiFi 设备，提升长线旅行舒适度。</p>
+          </article>
+          <article class="include-card">
+            <div class="include-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 7h8M8 11h8M8 15h5M5 3h14v18l-3-2-3 2-3-2-3 2-2-1.4V3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>签证费用</h3>
+            <p>报价包含签证费；如签证自理，按文档约定退还对应费用。</p>
+          </article>
+          <article class="include-card">
+            <div class="include-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>成交提醒</h3>
+            <p>航班、门票、天气及教堂开放情况以最终出团通知和境外实际安排为准。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap reveal">
+        <div>
+          <p class="kicker">READY TO LAND</p>
+          <h2>这是一套可直接落地的旅行产品专题页</h2>
+          <p>单文件包含 HTML、CSS、SVG 与少量交互脚本，无需外部框架。可用于网页、私域链接、门店大屏预览或产品说明页二次开发。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>花漾西欧 法意瑞德4国12天 · 页面设计方案</span>
+      <span>航班、时间、行程与包含项目以最终出团通知为准</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var header = document.getElementById("topbar");
+      var reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+
+      function updateHeader() {
+        if (window.scrollY > 40) {
+          header.classList.add("is-solid");
+        } else {
+          header.classList.remove("is-solid");
+        }
+      }
+
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.14 });
+
+        reveals.forEach(function (item) {
+          observer.observe(item);
+        });
+      } else {
+        reveals.forEach(function (item) {
+          item.classList.add("in");
+        });
+      }
+
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+    })();
+  </script>
+</body>
+</html>
